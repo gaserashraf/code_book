@@ -18,8 +18,8 @@
 
 ## 🏁 Install <a name = "Install"></a>
 1-excute database
--Install mysql.
--Execute sql Script on mysql workbench
+*Install mysql
+*Execute sql Script on mysql workbench
 - 2-Clone the repository
 ```
 git clone https://github.com/gaserashraf/code_book.git

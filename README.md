@@ -1,7 +1,7 @@
 # code_book
 <p align="center">
   <a href="" rel="noopener">
- <img width=1000px height=380px src="cb.jpg" alt="logo"></a>
+ <img width=100% src="cb.jpg" alt="logo"></a>
 </p>
 <p align="center"> 🏆 Code Book.
     <br> 

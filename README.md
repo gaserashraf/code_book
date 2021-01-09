@@ -6,6 +6,16 @@
 <p align="center"> 🏆 Code Book.
     <br> 
 </p>
+<div align="center">
+  
+[![GitHub contributors](https://img.shields.io/github/contributors/gaserashraf/code_book)](https://github.com/code_book/contributors)
+[![GitHub issues](https://img.shields.io/github/issues/gaserashraf/code_book)](https://github.com/gaserashraf/code_book/issues)
+[![GitHub forks](https://img.shields.io/github/forks/gaserashraf/code_book)](https://github.com/gaserashraf/code_book/network)
+[![GitHub stars](https://img.shields.io/github/stars/gaserashraf/code_book)](https://github.com/gaserashraf/code_book/stargazers)
+[![GitHub license](https://img.shields.io/github/license/gaserashraf/code_book)](https://github.com/gaserashraf/code_book/blob/master/LICENSE)
+
+</div>
+
 
 ## 📝 Table of Contents
 

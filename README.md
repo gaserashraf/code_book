@@ -17,7 +17,19 @@
 ## 🧐 About <a name = "about"></a>
 
 ## 🏁 Install <a name = "Install"></a>
-
+Clone the repository
+```
+git clone https://github.com/gaserashraf/code_book.git
+```
+```
+cd code_book
+```
+```
+npm install
+```
+```
+nodemon index
+```
 
 **Note:** Do not forget to change the ```DB_Connection_String``` in ```DBManager.cs```.
 

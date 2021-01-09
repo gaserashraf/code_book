@@ -11,7 +11,7 @@
 
 - [About](#about)
 - [Screenshots](#Screenshots)
-- [Get_Started] (#Install)
+- [Get Started](#Install)
 - [Technology](#tech)
 
 ## 📙 About <a name = "about"></a>

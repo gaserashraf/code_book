@@ -10,13 +10,13 @@
 ## 📝 Table of Contents
 
 - [About](#about)
-- [Demo](#demo)
-- [Install](#Install)
+- [Demo](#Screenshots)
+- [Install](#Get Started)
 - [Technology](#tech)
 
-## 🧐 About <a name = "about"></a>
+## 📙 About <a name = "about"></a>
 
-## 🏁 Install <a name = "Install"></a>
+## 🏁 Get Started <a name = "Install"></a>
 1. **Excute Database**
 - Install mysql
 - Execute sql Script on mysql workbench
@@ -45,7 +45,7 @@ nodemon index
 ```
 
 
-## ⛏️ Built Using <a name = "tech"></a>
+## 💻 Built Using <a name = "tech"></a>
 - **MYSQL**
 - **Nodejs**
 - **Express**

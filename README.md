@@ -27,7 +27,16 @@ git clone https://github.com/gaserashraf/code_book.git
 ```
 cd code_book
 ```
-3. Running
+3. Change data connection
+```
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password: 'password',//change to ur password
+  database : 'NyZaKa',
+});
+```
+4. Running
 ```
 npm install
 ```

@@ -27,7 +27,7 @@ git clone https://github.com/gaserashraf/code_book.git
 ```
 cd code_book
 ```
-3. Change data connection
+3. Change data connection in (routes/server.js)
 ```
 var connection = mysql.createConnection({
   host     : 'localhost',

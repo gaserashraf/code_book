@@ -46,13 +46,13 @@ nodemon index
 
 
 ## ⛏️ Built Using <a name = "tech"></a>
-- mysql
-- nodejs
-- express
-- html
-- some vanilla javascript
-- sass
-- bootstrap
+- **MYSQL**
+- **Nodejs**
+- **Express**
+- **HTML**
+- **Some vanilla javascript**
+- **SASS**
+- **Bootstrap**
 ## 📷 Screenshots 
 <div name="demo" align="center">
   <p align="center">

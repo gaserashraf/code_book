@@ -43,6 +43,7 @@ npm install
 ```
 nodemon index
 ```
+go to your browser and go to http://localhost:5000/
 
 
 ## 💻 Built Using <a name = "tech"></a>

@@ -24,6 +24,7 @@ git clone https://github.com/gaserashraf/code_book.git
 ```
 cd code_book
 ```
+Running
 ```
 npm install
 ```

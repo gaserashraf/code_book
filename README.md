@@ -10,8 +10,8 @@
 ## 📝 Table of Contents
 
 - [About](#about)
-- [Demo](#Screenshots)
-- [Install](#Get_Started)
+- [Screenshots](#Screenshots)
+- [Get_Started] (#Install)
 - [Technology](#tech)
 
 ## 📙 About <a name = "about"></a>
@@ -54,7 +54,7 @@ nodemon index
 - **SASS**
 - **Bootstrap**
 ## 📷 Screenshots 
-<div name="demo" align="center">
+<div name="Screenshots" align="center">
   <p align="center">
     
   </p>

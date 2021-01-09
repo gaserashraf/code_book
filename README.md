@@ -17,17 +17,17 @@
 ## 🧐 About <a name = "about"></a>
 
 ## 🏁 Install <a name = "Install"></a>
-1. Excute Database
+1. ** Excute Database **
 - Install mysql
 - Execute sql Script on mysql workbench
-2. Clone the repository
+2. ** Clone the repository **
 ```
 git clone https://github.com/gaserashraf/code_book.git
 ```
 ```
 cd code_book
 ```
-3. Change data connection in (routes/server.js)
+3. ** Change data connection in (routes/server.js) **
 ```
 var connection = mysql.createConnection({
   host     : 'localhost',
@@ -36,7 +36,7 @@ var connection = mysql.createConnection({
   database : 'NyZaKa',
 });
 ```
-4. Running
+4. ** Running **
 ```
 npm install
 ```
@@ -44,7 +44,6 @@ npm install
 nodemon index
 ```
 
-**Note:** Do not forget to change the ```DB_Connection_String``` in ```DBManager.cs```.
 
 ## ⛏️ Built Using <a name = "tech"></a>
 

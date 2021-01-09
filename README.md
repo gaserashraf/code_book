@@ -17,7 +17,7 @@
 ## 🧐 About <a name = "about"></a>
 
 ## 🏁 Install <a name = "Install"></a>
-1. excute database
+1. Excute Database
 - Install mysql
 - Execute sql Script on mysql workbench
 2. Clone the repository

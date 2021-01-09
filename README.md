@@ -17,17 +17,17 @@
 ## 🧐 About <a name = "about"></a>
 
 ## 🏁 Install <a name = "Install"></a>
-1-excute database
-*Install mysql
-*Execute sql Script on mysql workbench
-- 2-Clone the repository
+1. excute database
+- Install mysql
+- Execute sql Script on mysql workbench
+2. Clone the repository
 ```
 git clone https://github.com/gaserashraf/code_book.git
 ```
 ```
 cd code_book
 ```
-3-Running
+3. Running
 ```
 npm install
 ```

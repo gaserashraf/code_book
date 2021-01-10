@@ -68,7 +68,6 @@ go to your browser and go to http://localhost:5000/
 <div name="Screenshots" align="center">
   <p align="center">
     ![1](screenshots/1.png)
-    ---
   </p>
 </div>
 

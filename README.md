@@ -67,7 +67,7 @@ go to your browser and go to http://localhost:5000/
 ## 📷 Screenshots 
 
 <div name="Screenshots" align="center">
-   **Homepage**
+   <bold>Homepage</bold>
    <img width=100% src="screenshots/1.PNG" alt="logo"></a>
    <hr>
 </div>

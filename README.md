@@ -65,7 +65,9 @@ go to your browser and go to http://localhost:5000/
 - **SASS**
 - **Bootstrap**
 ## 📷 Screenshots 
+
 <div name="Screenshots" align="center">
+   **Homepage**
    <img width=100% src="screenshots/1.PNG" alt="logo"></a>
    <hr>
 </div>

@@ -25,6 +25,8 @@
 - [Technology](#tech)
 
 ## 📙 About <a name = "about"></a>
+online website about competitive programming. The site offers explanations about topics related to competitive programming and articles written by experts. In addition, the main core of the site is to solve problems about competitive programming, so the site contains problems with variant difficulty levels. The user can submit his solution output and the site checks that output.
+Each user can solve problems, see topics explanations, review articles, and can participate in official contests. On the other side come the developers, expert people for managing the site; these are responsible for putting problems and determine the input and output of each problem. Also, contributors write and edit materials of topics explanations.
 
 ## 🏁 Get Started <a name = "Install"></a>
 1. **Excute Database**

@@ -1,0 +1,93 @@
+<nav id='navbar' class="navbar navbar-expand-sm navbar-dark bg-dark navbar-light">
+    <div class="container ">
+        <a href="/" class="navbar-brand d-inline-block justify-content-center">
+            Code Book
+        </a>
+        <button class="navbar-toggler " data-toggle="collapse" data-target="#navv">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+
+        <%
+
+         let  Home ='nav-item hvr-underline-from-left';
+         let  problemset = 'nav-item hvr-underline-from-left';
+         let  contests = 'nav-item hvr-underline-from-left';
+         let  articles = 'nav-item hvr-underline-from-left';
+         let  Documentation = 'nav-item hvr-underline-from-left';
+         let groups = 'nav-item hvr-underline-from-left';
+            switch(Current_Nav){
+                case 'Home':
+                Home = 'nav-item active';
+                break;
+                case 'problemset':
+                problemset = 'nav-item active';
+                break;
+                case 'contests':
+                contests = 'nav-item active';
+                break;
+                case 'articles':
+                articles = 'nav-item active';
+                break;
+                case 'Documentation':
+                Documentation = 'nav-item active';
+                break;
+                case 'groups':
+                groups = 'nav-item active';
+                break;
+            }
+        %>
+
+        <div id="navv" class="collapse navbar-collapse justify-content-between">
+            <ul class="navbar-nav ">
+              <li class= '<%= Home%>' >
+                <a href="/" class="nav-link">Home</a>
+              </li>
+              <li class= '<%= problemset%>' >
+                <a href="/problemset" class="nav-link">Problem Set</a>
+              </li>
+              <li class= '<%= contests%>' >
+                <a href="/contests" class="nav-link">Contests</a>
+              </li>
+              <li class= '<%= articles%>' >
+                <a href="/articles" class="nav-link">Articles</a>
+              </li>
+              <li class= '<%= Documentation%>' >
+                <a href="/documentations" class="nav-link">Documentation</a>
+              </li>
+              <li class= '<%= groups%>' >
+                <a href="/groups" class="nav-link">Groups</a>
+              </li>
+              
+            </ul>
+            
+            <ul class="navbar-nav">
+              <form class="search d-flex justify-content-end align-items-center" method="POST" action="/search" id="searchForm" autocomplete="on">
+                <button form="searchForm" type="submit">
+                  <i class="fas fa-search mr-2" aria-hidden="true" style="color: #9A9DA0; cursor: pointer;"></i>
+                </button>
+                <input form="searchForm" class="form-control"  name="search" type="text" placeholder="Search" aria-label="Search" id="Search">
+              </form>
+                <%if(typeof user !== 'undefined'){%>
+                    <li class="nav-item">
+                        <a href="/profile" class="nav-link" ><%=user.user.Handle%></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="/logout" class="nav-link">logout</a>
+                    </li>
+                
+                <%}else {%> 
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link">Log In</a>
+                    </li>
+                    <!-- <span class="slash">/</span> -->
+                    <li class="nav-item">
+                        <a href="/signup" class="nav-link">Sign Up</a>
+                    </li>
+                <%}%>
+                
+            </ul>
+            
+          </div>
+        </div>
+      </nav>

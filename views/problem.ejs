@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+
+<head>
+    <title>
+        Code Book
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script> 
+
+</head>
+
+<body class="">
+    <!-- Nav tabs -->
+
+    <%- include('./partials/nav.ejs') %>
+
+    <section>
+        <h1 class="p-4 text-dark bg-white h1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mr-auto">
+                        <%= Problem.Name%>
+                    </div>
+                    <div class="col-md-6">
+                        <%if(user&&user.user.Acsess=="developer" && user.user.Handle==Problem.Writer){%>
+                        <a href="/problems/edit/<%=Problem.ID%>" class="btn btn-success mr-2"> <i
+                                class="far fa-edit mr-1"></i>
+                            Update</a>
+                        <!--Delete is disabled as it has a bug-->
+                        <!--<a href="" class="btn btn-danger delete" data-problemId="<%=Problem.ID%>">
+                            <i class="far fa-trash-alt mr-1"></i>Delete</a>-->
+                        <%}%>
+                    </div>
+                </div>
+            </div>
+        </h1>
+        <%if(user&&user.user.Acsess=="developer" && user.user.Handle==Problem.Writer){%><%}%>
+        
+
+        <div class="row">
+            <div class="p-4 bg-white m-4 col-md-10 mx-md-auto">
+                <div class="p-3 mb-2">
+                    <h2 class="h2">Description</h2>
+                    <p class="text-muted">
+                        <%= Problem.statement %>
+                        </p>
+                    </div>
+                    <div class="p-3 mb-2">
+                        <h2 class="h2">Input Format </h2>
+                        <p class="text-muted">
+                            <%= Problem.Input_Format %>
+                        </p>
+                    </div>
+                    <div class="p-3 mb-2">
+                        <h2 class="h2">Output Format </h2>
+                        <p class="text-muted">
+                            <%= Problem.Output_Format %>
+                        </p>
+                    </div>
+                    <div class="p-3 mb-2">
+                        <h2 class="h2">Sample Input</h2>
+                        <p class="p-3 bg-light border rounded">
+                            <%= Problem.Sample_Input %>
+                        </p>
+                    </div>
+                    <div class="p-3 mb-2">
+                        <h2 class="h2">Sample Output</h2>
+                        <p class="p-3 bg-light border rounded">
+                            <%= Problem.Sample_Output %>
+                        </p>
+                    </div>
+
+                    <div class="p-3 mb-2">
+                        <h2 class="h2">Input</h2>
+                        <p class="p-3 bg-light border rounded">
+                            <%= Problem.Input %>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row bg-white p-4">
+                <div class="col-md-10 mx-md-auto">
+                    <form action="/problems/<%= Problem.ID %> " method="POST" id="submission">
+                        <div class="form-group">
+                            <label form="submission" for="output" class="h2">Output</label>
+                            <textarea form="submission" class="form-control bg-light" id="output" name="output"
+                                rows="3"></textarea>
+                        </div>
+                        <div form="submission" type="submit" class="form-group">
+                            <button class="btn btn-outline-success btn-lg px-5 d-block mx-auto">
+                                Submit Output
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </section>
+    <%- include('./partials/footer.ejs') %>
+    <!-- Scripts -->
+
+    <%- include('./partials/Scripts.ejs') %>
+
+    <script>
+        /*const probToDelete = document.querySelector('a.delete');
+        probToDelete.addEventListener('click', e => {
+            const endPoint = `/problems/${probToDelete.dataset.problemid}`;
+            fetch(endPoint, {
+                method: 'DELETE'
+            }).then(res => res.json()).then(data => {
+                window.location.href = data.redirect;
+                //window.location.href = '/';
+                //console.log(data.redirect);
+            }).catch(err => console.log(err));
+        });*/
+    </script>
+</body>
+
+</html>

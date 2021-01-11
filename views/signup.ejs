@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+	<head>
+		<title>
+			Code Book
+		</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script>
+
+	</head>
+	<body class="">
+		<!-- Nav tabs -->
+		
+		<%- include('./partials/nav.ejs') %>
+		
+		<section class="">
+			<div class="container">
+				<div class="w-100 d-flex justify-content-center">
+					<div class="w-50 p-5">
+						<form action="/signup" method="POST" id="signupform">
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+								<span class="input-group-text " id="inputGroupPrepend"><i class="fas fa-user"></i></span>
+								</div>
+								<input form="signupform" required type="text" id="username" name="username" placeholder="Username | Handle" class="form-control form-control-lg mb-md-0 mb-3">
+							</div>
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+								<span class="input-group-text " id="inputGroupPrepend"><i class="fas fa-user"></i></span>
+								</div>
+								<input form="signupform" required type="text" id="fname" name="fname" placeholder="First Name" class="form-control form-control-lg mb-md-0 mb-3">
+							</div>
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+								<span class="input-group-text " id="inputGroupPrepend"><i class="fas fa-user"></i></span>
+								</div>
+								<input form="signupform" required type="text" id="lname" name="lname" placeholder="Last Name" class="form-control form-control-lg mb-md-0 mb-3">
+							</div>
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+								<span class="input-group-text " id="inputGroupPrepend"><i class="fas fa-envelope"></i></span>
+								</div>
+								<input form="signupform" required type="text" id="email" name="email" placeholder="Email" class="form-control form-control-lg mb-md-0 mb-3">
+							</div>
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+								<span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-lock"></i></span>
+								</div>
+								<input form="signupform" required type="password" id="password" name="password" placeholder="Password" class="form-control form-control-lg">
+							</div>
+							<div class="form-check form-check-inline">
+								<input form="signupform" class="form-check-input" required type="radio" name="inlineRadioOptions" id="student" value="student">
+								<label class="form-check-label" for="student">Student</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input form="signupform" class="form-check-input" required type="radio" name="inlineRadioOptions" id="developer" value="developer">
+								<label class="form-check-label" for="developer">Developer</label>
+							</div>
+							  
+							<button form="signupform" type="submit" class="btn btn-lg btn-block" >sign up</button>
+						</form>
+						<div>
+							<p>alreay have account?</p>
+							<a href="login">log in</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+			
+		<%- include('./partials/footer.ejs') %>
+		<!-- Scripts -->
+		<%- include('./partials/Scripts.ejs') %>
+		
+			<script>
+		
+				
+			</script>
+	</body>
+</html>

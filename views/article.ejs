@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+
+<head>
+    <title>
+        Code Book
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="">
+    <!-- Nav tabs -->
+    <%- include('./partials/nav.ejs') %>
+
+    <section>
+        <h1 class="p-4 text-dark bg-white h1">
+            <div class="row">
+                <div class="col-md-10 mx-md-auto">
+                    <%=article.ArtName%>
+                </div>
+            </div>
+        </h1>
+        <div class="row">
+            <div class="p-4 bg-white m-4 col-md-10 mx-md-auto">
+                <div class="p-3 mb-2">
+                    <h2 class="text-dark h2 mb-0"><%=article.ArtName%></h2>
+                    <h2 class="text-muted"><%=article.Art_date%></h2>
+                    <h2 class="text-muted h2"><%=article.Topic%></h2>
+                    <p class="text-muted mb-3">
+                        <%=article.Statment%>
+                    </p>
+                    <%if(user&&user.user.Acsess=="developer" && user.user.Handle==article.Writer){%>
+                    <a href="/articles/edit/<%=article.ID%>" class="btn btn-success mr-2"> <i
+                            class="far fa-edit mr-1"></i> Update</a>
+                    <a href="" class="btn btn-danger delete" data-articleId="<%=article.ID%>"> <i
+                            class="far fa-trash-alt mr-1"></i>Delete </a>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <%- include('./partials/footer.ejs') %>
+                    <!-- Scripts -->
+
+                    <%- include('./partials/Scripts.ejs') %>
+                    <script>
+                        const artToDelete = document.querySelector('a.delete');
+                        artToDelete.addEventListener('click', e => {
+                            const endPoint = `/articles/${artToDelete.dataset.articleid}`;
+                            fetch(endPoint, {
+                                method: 'DELETE'
+                            }).then(res => res.json()).then(data => {
+                                window.location.href = data.redirect;
+                            }).catch(err => console.log(err));
+                        });
+                    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+
+<head>
+	<title>
+		Code Book
+	</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="">
+	<!-- Nav tabs -->
+
+	<%- include('./partials/nav.ejs') %>
+
+		<section>
+			<div class="row">
+				<div class="col py-3" style="background-color: #fff;">
+					<div class="container">
+						<h2 class="display-4"><i class="fas fa-newspaper mr-2" style="font-size: 45px;"></i>Create
+							Documentation
+						</h2>
+					</div>
+
+				</div>
+			</div>
+			<div class="row justify-content-center">
+
+				<div class="col-md-8 ">
+					<form action="/createdocumentation" method="POST" id="createdoc">
+						<div class="card-body text-center">
+							<h2>Please fill all data to create Documentation</h2>
+							<hr>
+							<div class="d-md-flex d-block justify-content-between mb-3">
+								<input form="createdoc" type="text" required placeholder="Documentation title"
+									class="form-control mb-md-0 mb-3 form-control-lg" type="text" id="title"
+									name="title">
+							</div>
+							<div class="d-md-flex d-block justify-content-between mb-3">
+								<input form="createdoc" type="text" required placeholder="Documentation Topic"
+									class="form-control mb-md-0 mb-3 form-control-lg" type="text" id="Topic" name="Topic">
+							</div>
+							<textarea form="createdoc" required placeholder="Documentation body" class="form-control mb-3 form-control-lg"
+								type="text" id="body" name="body"></textarea>
+							<div class="d-md-flex d-block justify-content-between mb-3">
+
+							</div>
+
+							<button form="createdoc" type="submit" class="btn btn-outline-dark btn-block">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<%- include('./partials/footer.ejs') %>
+		<!-- Scripts -->
+
+		<%- include('./partials/Scripts.ejs') %>
+
+		<script>
+
+
+		</script>
+</body>
+
+</html>

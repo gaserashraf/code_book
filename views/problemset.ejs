@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+
+<head>
+	<title>
+		Code Book
+	</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	 <script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script> 
+
+</head>
+
+<body class="">
+	<!-- Nav tabs -->
+	<%- include('./partials/nav.ejs') %>
+	
+	<section>
+		<div class="row">
+			<div class="col py-3" style="background-color: #fff;">
+				<div class="container">
+					<h2 class="display-4"><i class="fas fa-code mr-2" style="font-size: 45px;"></i> Problems</h2>
+				</div>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10 mx-md-auto">
+
+				<% Problemset.forEach( problem => { %>
+				<a href="/problems/<%=problem.ID %>" class="d-block my-3 mx-3 p-4 bg-white border rounded">
+					<div class="row">
+						<div class="col-md-8 mb-3 mb-md-0">
+							<h2 class="text-dark h2"><%= problem.Name %></h2>
+							<p class="text-muted"><%= problem.statement.substring(0,80) %> ....readmore</p>
+						</div>
+						<div class="col-md-4 align-self-center">
+							<button class="btn btn-success w-100 btn-lg">Solve Challenge</button>
+						</div>
+					</div>
+				</a>
+
+				<%});%>
+
+			</div>
+		</div>
+
+	</section>
+	<%- include('./partials/footer.ejs') %>
+	<!-- Scripts -->
+
+	<%- include('./partials/Scripts.ejs') %>
+
+	<script>
+
+
+	</script>
+</body>
+
+</html>

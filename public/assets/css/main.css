@@ -1,0 +1,368 @@
+/* Underline From Left */
+@import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200");
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #2098D1;
+  height: 4px;
+  transition-property: right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+  right: 0;
+}
+
+#navbar {
+  font-family: mainFont;
+}
+
+#navbar .navbar-brand {
+  font-size: 30px;
+}
+
+#navbar .navbar-nav {
+  position: relative;
+}
+
+#navbar .navbar-nav .nav-item {
+  margin-left: 25px;
+  text-transform: uppercase;
+}
+
+#navbar .navbar-nav .nav-item.active {
+  border-bottom: 4px solid #2098D1;
+}
+
+#navbar .navbar-nav .slash {
+  position: absolute;
+  top: 7px;
+  left: 99px;
+}
+
+#navbar .navbar-nav .search button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+#navbar .navbar-nav .search input {
+  width: 50%;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  background-color: #343A40;
+  border: none;
+  color: #9A9DA0;
+}
+
+#navbar .navbar-nav .search input::placeholder {
+  color: #9A9DA0;
+  font-size: 18px;
+}
+
+#navbar .navbar-nav .search input.active {
+  animation-name: example;
+  color: #343A40;
+}
+
+#navbar .navbar-nav .search input.dactive {
+  animation-name: example1;
+}
+
+@keyframes example {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+    background-color: white;
+  }
+}
+
+@keyframes example1 {
+  0% {
+    width: 100%;
+    background-color: white;
+  }
+  100% {
+    width: 50%;
+    background-color: #343A40;
+  }
+}
+
+/*
+	Halcyonic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+@font-face {
+  font-family: mainFont;
+  src: url("../../fonts/UbuntuCondensed-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  height: 100%;
+}
+
+body section {
+  position: relative;
+  min-height: 86.5vh;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+mark {
+  background-color: transparent;
+  color: inherit;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input, textarea, button {
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  resize: none;
+}
+
+input[type="radio"] {
+  -webkit-appearance: radio;
+}
+
+.mb-em {
+  margin-bottom: 1em;
+}
+
+.mt-em {
+  margin-top: 1em;
+}
+
+.row {
+  margin: 0;
+}
+
+/* Basic */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #D4D9DD;
+  color: #474f51;
+  font-size: 13.5pt;
+  font-family: mainFont;
+  line-height: 1.85em;
+  font-weight: 300;
+}
+
+input, textarea, select {
+  color: #474f51;
+  font-size: 13.5pt;
+  font-family: mainFont;
+  line-height: 1.85em;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+section > :last-child,
+section:last-child,
+.last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Container */
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1300px;
+  padding-left: 0;
+}
+
+@media screen and (max-width: 1680px) {
+  .container {
+    width: 1300px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .container {
+    width: calc(100% - 50px);
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.pre {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  color: rgba(0, 0, 0, 0.9);
+  font-family: Consolas,monospace;
+  margin-bottom: 10px;
+  overflow: auto;
+  padding: 10px;
+}
+
+#content .box {
+  background-color: white;
+}
+
+#content .box .header {
+  margin-bottom: 1rem;
+}
+
+#content .box .header h2 {
+  font-size: 24px;
+}
+
+#content .box .pre {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  color: rgba(0, 0, 0, 0.9);
+  font-family: Consolas,monospace;
+  margin-bottom: 10px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.boxFriend {
+  background-color: #fff;
+  padding: 5px;
+  border: 1.5px solid #474f51;
+  margin: 5px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.boxFriend .iconRemove {
+  position: absolute;
+  right: 5px;
+}
+
+.join {
+  cursor: pointer;
+}
+
+.boxName {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: #474f51;
+  color: #D4D9DD;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 980px) {
+  .slash {
+    display: none;
+  }
+}

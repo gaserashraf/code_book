@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+	<head>
+		<title>
+			Code Book
+		</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script>
+
+	</head>
+	<body class="">
+		<!-- Nav tabs -->
+		
+		<%- include('./partials/nav.ejs') %>
+        
+		<section class="f">
+			<div class="container">
+				<div class="row">
+                
+                    <div class="col-md-8 mx-md-auto">
+						<h2>Users</h2>
+						<%if(arrUsers.length){%>
+							<%arrUsers.forEach(e=>{ %>
+								<div class="boxFriend d-flex">
+									<a href="/profile/<%=e.Handle%>"><%=e.Handle%></a>
+									<!-- <div class="d-flex justify-content-end">
+										<a href="" class="iconRemove"><i class="fas fa-users-slash"></i></a>
+									</div> -->
+								</div>
+							<%});%>
+                        <%}%>
+                    </div>
+				</div>
+				
+				<div class="row">
+                
+                    <div class="col-md-8 mx-md-auto">
+						<h2>Articles</h2>
+						<%if(arrArt.length){%>
+							<%arrArt.forEach(e=>{ %>
+							<div class="boxFriend d-flex">
+								<a href="/articles/<%=e.ID%>"><%=e.ArtName%></a>
+					
+							</div>
+							<%});%>
+						<%}%>
+                    </div>
+				</div>
+				
+
+				<div class="row">
+                
+                    <div class="col-md-8 mx-md-auto">
+						<h2>Documentation</h2>
+						<%if(arrDoc.length){%>
+							<%arrDoc.forEach(e=>{ %>
+							<div class="boxFriend d-flex">
+								<a href="/Documentation/<%=e.ID%>"><%=e.DocName%></a>
+					
+							</div>
+							<%});%>
+                        <%}%>
+                    </div>
+				</div>
+				
+				<div class="row">
+				
+					<%console.log(arrproblems)%>
+					<div class="col-md-8 mx-md-auto">
+						<h2>Problems</h2>
+						<%if(arrproblems.length){%>
+							<%arrproblems.forEach(e=>{ %>
+							<div class="boxFriend d-flex">
+								<a href="/problems/<%=e.ID%>"> <%= e.Name %> </a>
+				
+							</div>
+							<%});%>
+						<%}%>
+					</div>
+				</div>
+	
+				<div class="row">
+					
+					<div class="col-md-8 mx-md-auto">
+						<h2>Groups</h2>
+						<%arrGroups.forEach(e=>{ %>
+						<div class="boxFriend d-flex">
+							<a href="/groups/<%=e.Name%>"><%=e.Name_%></a>
+				
+						</div>
+						<%});%>
+						
+					</div>
+				</div>
+				
+			</div>
+			
+
+
+		</section>
+
+		<%- include('./partials/footer.ejs') %>
+		<!-- Scripts -->
+		
+		<%- include('./partials/Scripts.ejs') %>
+		
+			<script>
+		
+				
+			</script>
+	</body>
+</html>

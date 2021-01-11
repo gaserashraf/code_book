@@ -1,0 +1,31 @@
+{
+  "name": "databaseproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/El-Nebo/Team-Abbas-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/El-Nebo/Team-Abbas-/issues"
+  },
+  "homepage": "https://github.com/El-Nebo/Team-Abbas-#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "nodejs": "^0.0.0",
+    "nodemon": "^2.0.6",
+    "util": "^0.12.3"
+  }
+}

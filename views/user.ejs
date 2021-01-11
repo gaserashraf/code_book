@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+	<head>
+		<title>
+			Code Book
+		</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+		
+		<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script>
+
+	</head>
+	<body class="">
+		<!-- Nav tabs -->
+		
+		<%- include('./partials/nav.ejs') %>
+		
+		<section>
+            <div class="container mt-4">
+                <div class="row bg-white border rounded p-5">
+
+                    <div class="col-8">
+                        <%console.log(currUser)%>
+                        <h2 class="display-4">
+                            <%=currUser.Fname+" "+currUser.Lname%>
+                            <% if(!currUser.IsFriend){%>
+                                <a data-handle="<%=currUser.Handle%>" id="add" class="btn text-primary"><i class="fas fa-user-friends mr-2"></i>Add Friend</a>
+                            <%}else{%>
+                                <a data-handle="<%=currUser.Handle%>" id="remove" class="btn text-primary"><i class="fas fa-users-slash mr-2"></i></i>Remove Friend</a>
+                            <%}%>
+						</h2>
+						<h2 class="text-muted">
+							<%="@"+currUser.Handle%>
+						</h2>
+                        <h2 class="text-muted">
+							<%=currUser.Acsess%>
+						</h2>
+
+						<h2> <i class="far fa-star mr-2"></i>
+							<%if(currUser.Rating==null){%>
+								Rating : 0
+							<%}else{%>
+								<%="Rating : "+currUser.Rating %> 
+							<%}%>
+						</h2>
+						
+						<%if(currUser.Acsess=="developer"){%>
+							<h2><i class="fas fa-check mr-2"></i>
+								Number of problems made: <%=currUser.NumMadeProblem %> 
+							</h2>
+							<h2><i class="fas fa-check mr-2"></i>
+								Number of articles write: <%=currUser.NumArticles %>
+                            </h2>
+                            <h2><i class="fas fa-check mr-2"></i>
+								Number of documentations write: <%=currUser.NumDocumentations %>
+							</h2>
+						<%}else{%>
+						<h2><i class="fas fa-check mr-2"></i> 
+							Number of problems solved: <%=currUser.NumSolvedProblem %>
+					   </h2> 
+					   <%  }%>
+					   <h2><i class="fas fa-star mr-2"></i>
+						Following: <%=currUser.NumFriends %> users
+					</h2>
+					<h2><i class="fas fa-star mr-2"></i>
+						Followers: <%=currUser.NumFollowee %> users
+					</h2>
+                        
+						<h2><i class="far fa-envelope mr-2"></i>
+							<%=currUser.E_mail %>
+						</h2>
+                    </div>
+                    <div class="col-4">
+                       
+                        <div class=" border rounded p-1">
+							<%if(currUser.Acsess=="developer"){%>
+								<img src="/images/developer.jpg" class="w-100" alt="">
+							<%}else{%>
+								<img src="/images/student.jpg" class="w-100" alt="">
+							<%}%>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+		</section>
+		<%- include('./partials/footer.ejs') %>
+		<!-- Scripts -->
+		
+		<%- include('./partials/Scripts.ejs') %>
+			<script>
+		
+				let addFriend=document.getElementById("add");
+				if(addFriend)
+				{
+					addFriend.onclick=()=>{
+						const endpoint=`/profile/${addFriend.dataset.handle}`;
+						fetch(endpoint,{
+							method:'POST'
+						})
+						.then((res)=>res.json())
+						.then(data=>{
+							window.location.href=data.redirect;
+						})
+						.catch((err)=>{console.log(err)});
+					}
+				}
+
+
+				let removeFriend=document.getElementById("remove");
+				if(removeFriend)
+				{
+					removeFriend.onclick=()=>{
+						const endpoint=`/profile/${removeFriend.dataset.handle}`;
+						fetch(endpoint,{
+							method:'DELETE'
+						})
+						.then((res)=>res.json())
+						.then(data=>{
+							window.location.href=data.redirect;
+						})
+						.catch((err)=>{console.log(err)});
+					}
+				}
+			</script>
+	</body>
+</html>

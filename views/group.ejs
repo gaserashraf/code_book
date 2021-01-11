@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+
+<head>
+    <title>
+        Code Book
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="">
+    <!-- Nav tabs -->
+
+    <%- include('./partials/nav.ejs') %>
+
+        <section>
+            <div class="row">
+                <div class="col py-3" style="background-color: #fff;">
+                    <div class="container">
+                        <h2 class="display-4"><i class="fas fa-user-friends mr-2" style="font-size: 45px;"></i>
+                            <%=group.Name%>
+                        </h2>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- ------------------------------- -->
+
+            <div class="container mt-2">
+
+                <div class="row  justify-content-center">
+                    <h1 class="h2"><i class="fas fa-user-shield mr-2"></i> Admins</h1>
+
+                    <%group.Admins.forEach( admin=> {%>
+                        
+                            <div class="col-md-11 mb-3 mb-md-0">
+                                <div class="boxFriend d-flex w-100" >
+                                    <a href="/profile/<%= admin %>">
+                                        <h2 class="text-dark">
+                                            <%= admin %>
+                                        </h2>
+                                    </a>
+                                </div>
+                            </div>
+                       
+                    <%});%>
+                </div>
+
+    
+                <div class="row  justify-content-center">
+                    <h1 class="h2"><i class="fas fa-users mr-2"></i> Members</h1>
+
+                    <%group.Members.forEach( member=> {%>
+                        
+                            <div class="col-md-11 mb-3 mb-md-0 w-100">
+                                <div class="boxFriend d-flex">
+                                    <a href="/profile/<%= member %>">
+                                        <h2 class="text-dark">
+                                            <%= member %>
+                                        </h2>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                        <%});%>
+                    </div>
+
+                    <!-- ------------------------------- -->
+                </div>
+        </section>
+        <%- include('./partials/footer.ejs') %>
+        <!-- Scripts -->
+
+        <%- include('./partials/Scripts.ejs') %>
+
+        <script>
+
+
+        </script>
+</body>
+
+</html>

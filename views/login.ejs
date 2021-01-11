@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+	<head>
+		<title>
+			Code Book
+		</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script>
+
+	</head>
+	<body class="">
+		<!-- Nav tabs -->
+		
+		<%- include('./partials/nav.ejs') %>
+		
+		<section class="">
+			<div class="container">
+				<form action="/login" method="POST" id="loginForm">
+					<div class="w-100 d-flex justify-content-center">
+						
+						<div class="w-50 p-5">
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+								<span class="input-group-text " id="inputGroupPrepend"><i class="fas fa-user"></i></span>
+								</div>
+								<input form="loginForm" required name="username" type="text" placeholder="User Name" class="form-control form-control-lg mb-md-0 mb-3">
+							</div>
+							<div class="input-group mb-2">
+								<div class="input-group-prepend">
+								<span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-lock"></i></span>
+								</div>
+								<input form="loginForm" required name="password" type="password" placeholder="Password" class="form-control form-control-lg">
+							</div>
+							<button form="loginForm" type="submit" class="btn btn-lg btn-block" >Login</button>
+
+							<div>
+								<p>don't have account?</p>
+								<a href="signup"> sign up</a>
+							</div>
+						</div>
+						
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<%- include('./partials/footer.ejs') %>
+
+		<!-- Scripts -->
+		
+		<%- include('./partials/Scripts.ejs') %>
+		
+			<script>
+		
+				
+			</script>
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+
+<head>
+    <title>
+        Code Book
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="">
+    <!-- Nav tabs -->
+
+    <%- include('./partials/nav.ejs') %>
+
+        <section>
+            <div class="row">
+                <div class="col py-3" style="background-color: #fff;">
+                    <div class="container">
+                        <h2 class="display-4"><i class="fas fa-user-friends mr-2" style="font-size: 45px;"></i> Groups
+                        </h2>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 mx-md-auto">
+
+                    <% ArrGroups.forEach(Group=> {%>
+                        <a href="groups/<%= Group.Name%>" >
+                            <div class="d-block my-3 mx-3 p-4 bg-white border rounded">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="d-flex">
+                                            <div class="mr-4">
+                                                <h2 class="text-dark h2 mb-4">
+                                                    <%= Group.Name %>
+                                                </h2>
+                                            </div>
+                                            <div>
+                                                <a class="join btn btn-dark text-light" data-doc="<%= Group.Name %>"> Join </a>
+                                            </div>
+                                        </div>
+                                        <ul class="list-group ">
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <p>
+                                                    <%= Group.Owner %>
+                                                        <a href="profile/<%=Group.Owner%>" class="ml-2 text-muted">view
+                                                            profile</a>
+                                                </p>
+                                                <span class="badge badge-success">Owner</span>
+                                            </li>
+
+                                            <% Group.Admins.forEach( Admin=> { %>
+                                                <li
+                                                    class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <p>
+                                                        <%=Admin%>
+                                                            <a href="profile/<%=Admin%>" class="ml-2 text-muted">view
+                                                                profile</a>
+                                                    </p>
+                                                    <span class="badge badge-success">Admin</span>
+                                                </li>
+                                                <% });%>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <%});%>
+
+                </div>
+            </div>
+
+        </section>
+        <%- include('./partials/footer.ejs') %>
+        <!-- Scripts -->
+
+        <%- include('./partials/Scripts.ejs') %>
+        <script>
+
+
+        </script>
+</body>
+
+</html>

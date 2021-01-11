@@ -1,0 +1,265 @@
+@import 'libs/functions';
+@import 'libs/breakpoints';
+@import 'libs/hover';
+@import 'navbar';
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200');
+
+/*
+	Halcyonic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+// Breakpoints.
+
+	@include breakpoints((
+		xlarge:  ( 1281px,  1680px ),
+		large:   ( 981px,   1280px ),
+		medium:  ( 737px,   980px  ),
+		small:   ( null,    736px  )
+	));
+	@font-face {
+		font-family: mainFont;
+		src: url("../../fonts/UbuntuCondensed-Regular.ttf");
+	  }
+// Reset.
+// Based on meyerweb.com/eric/tools/css/reset (v2.0 | 20110126 | License: public domain)
+	  *{
+		  box-sizing: border-box;
+	  }
+	html, body, div, span, applet, object,
+	iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+	pre, a, abbr, acronym, address, big, cite,
+	code, del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var, b,
+	u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+	form, label, legend, table, caption, tbody,
+	tfoot, thead, tr, th, td, article, aside,
+	canvas, details, embed, figure, figcaption,
+	footer, header, hgroup, menu, nav, output, ruby,
+	section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	html{
+		height: 100%;
+	}
+	body section{
+		
+			position: relative;
+			min-height: 86.5vh;
+		  
+	}
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	hr
+	{
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		line-height: 1;
+	}
+
+	ol, ul {
+		list-style: none;
+	}
+
+	blockquote,	q {
+		quotes: none;
+
+		&:before,
+		&:after {
+			content: '';
+			content: none;
+		}
+	}
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	body {
+		-webkit-text-size-adjust: none;
+	}
+
+	mark {
+		background-color: transparent;
+		color: inherit;
+	}
+
+	input::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+
+	input, textarea, button {
+		-webkit-appearance: none;
+		-webkit-font-smoothing: antialiased;
+		resize: none;
+	}
+	input[type="radio"]{
+		-webkit-appearance: radio;
+	}
+	.mb-em{
+		margin-bottom: 1em;
+	}
+	.mt-em{
+		margin-top: 1em;
+	}
+	.row{
+		margin: 0;
+	}
+/* Basic */
+
+	// Set box model to border-box.
+	// Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+		html {
+			box-sizing: border-box;
+		}
+
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+
+	body {
+		background: #D4D9DD;
+		color: #474f51;
+		font-size: 13.5pt;
+		font-family: mainFont;
+		line-height: 1.85em;
+		font-weight: 300;
+	}
+
+	input, textarea, select {
+		color: #474f51;
+		font-size: 13.5pt;
+		font-family: mainFont;
+		line-height: 1.85em;
+		font-weight: 300;
+	}
+
+	
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	section > :last-child,
+	section:last-child,
+	.last-child {
+		margin-bottom: 0 !important;
+	}
+
+/* Container */
+
+	.container {
+		margin: 0 auto;
+		max-width: 100%;
+		width: 1300px;
+		padding-left: 0;
+
+		@include breakpoint('<=xlarge') {
+			width: 1300px;
+		}
+
+		@include breakpoint('<=large') {
+			width: calc(100% - 40px);
+		}
+
+		@include breakpoint('<=medium') {
+			width: calc(100% - 50px);
+		}
+
+		@include breakpoint('<=small') {
+			width: calc(100% - 40px);
+		}
+	}
+
+a{
+	text-decoration: none;
+}	
+.pre{
+	background-color: #e0e0e0;
+	border-radius: 10px;
+	color: rgba(0,0,0,.9);
+	font-family: Consolas,monospace;
+	margin-bottom: 10px;
+	overflow: auto;
+	padding: 10px;
+}
+#content{
+	.box{
+		background-color: white;
+		.header{
+			margin-bottom: 1rem;
+			h2{
+				font-size: 24px;
+			}
+		}
+		.pre{
+			background-color: #e0e0e0;
+			border-radius: 10px;
+			color: rgba(0,0,0,.9);
+			font-family: Consolas,monospace;
+			margin-bottom: 10px;
+			overflow: auto;
+			padding: 10px;
+		}
+	}
+}
+.boxFriend{
+	background-color: #fff;
+	padding: 5px;
+	border: 1.5px solid #474f51;
+	margin: 5px;
+	position: relative;
+	border-radius: 5px;
+	.iconRemove{
+		position: absolute;
+		right: 5px;
+	}
+}
+.join
+{
+	cursor: pointer;
+}
+.boxName
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	margin-right: 5px;
+	background-color: #474f51;
+	color:#D4D9DD;
+	display: flex;
+	justify-content: center;
+}
+@include breakpoint('<=xlarge') {
+	
+}
+
+@include breakpoint('<=large') {
+	
+}
+
+@include breakpoint('<=medium') {
+	.slash{
+		display: none;
+	}
+}
+
+@include breakpoint('<=small') {
+	
+}

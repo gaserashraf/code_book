@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+
+<head>
+	<title>
+		Code Book
+	</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="">
+
+	<%- include('./partials/nav.ejs') %>
+
+	<section>
+		<div class="container mt-4">
+			<div class="row bg-white border rounded p-5">
+
+				<div class="col-8">
+					<h2 class="display-4">
+						<%=user.user.Fname+" "+user.user.Lname%>
+					</h2>
+					<h2 class="text-muted">
+						<%="@"+user.user.Handle%>
+					</h2>
+					<h2 class="text-muted">
+						<%=user.user.Acsess%>
+					</h2>
+					<a href="profile/updateProfile"><i class="fas fa-cog mr-2"></i>Update profile</a>
+					<h2> <i class="far fa-star mr-2"></i>
+						<%if(Profile.Rating==null){%>
+						Rating : 0
+						<%}else{%>
+						<%="Rating : "+Profile.Rating %>
+						<%}%>
+						</h2>
+						<%if(user.user.Acsess=="developer"){%>
+						<h2><i class="fas fa-check mr-2"></i>
+							Number of problems made: <%=Profile.NumMadeProblem %>
+						</h2>
+						<h2><i class="fas fa-check mr-2"></i>
+							Number of articles write: <%=Profile.NumArticles %>
+						</h2>
+						<h2><i class="fas fa-check mr-2"></i>
+							Number of documentations write: <%=Profile.NumDocumentations %>
+						</h2>
+						<%}%>
+						<h2><i class="fas fa-check mr-2"></i> 
+							Number of problems solved: <%=Profile.NumSolvedProblem %>
+					</h2>
+					<h2><i class="fas fa-star mr-2"></i>
+						Following: <%=Profile.NumFriends %> users
+					</h2>
+					<h2><i class="fas fa-star mr-2"></i>
+						Followers: <%=Profile.NumFollowee %> users
+					</h2>
+					<a href="profile/myfriends">View My Friends</a>
+					<h2><i class="far fa-envelope mr-2"></i>
+						<%=user.user.E_mail %>
+					</h2>
+
+
+					<!--some function if he has a developer token-->
+					<div class="mt-3">
+
+						<%if(user.user.Acsess=="developer"){%>
+						<a href="createcontest" class="btn btn-dark text-light">Make Contest</a>
+						<a href="creategroup" class="btn btn-dark text-light">Make Group</a>
+						<a href="createarticle" class="btn btn-dark text-light">Write Article</a>
+						<a href="createdocumentation" class="btn btn-dark text-light">Write Documentation</a>
+						<a href="createproblem" class="btn btn-dark text-light">Make Problem</a>
+						<%}%>
+					<!--Teams are for both students and developers-->
+					<a href="createteam" class="btn btn-dark text-light">Make Team</a>
+					<a href="teams" class="btn btn-dark text-light">View my teams</a>
+
+					</div>
+
+                    </div>
+                    <div class="col-4">
+                       
+                        <div class=" border rounded p-1">
+							<%if(user.user.Acsess=="developer"){%>
+						<img src="images/developer.jpg" class="w-100" alt="">
+						<%}else{%>
+						<img src="images/student.jpg" class="w-100" alt="">
+						<%}%>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+		</section>
+		<%- include('./partials/footer.ejs') %>
+						<!-- Scripts -->
+
+						<%- include('./partials/Scripts.ejs') %>
+
+						<script>
+							// $('body').scrollspy({target:'#nav'})
+
+							// // Smooth Scrolling
+							// $("nav a").on('click', function (event) {
+							// if (this.hash !== "") {
+							// 	event.preventDefault();
+
+							// 	const hash = this.hash;
+
+							// 	$('html, body').animate({
+							// 	scrollTop: $(hash).offset().top
+							// 	}, 800, function () {
+
+							// 	//window.location.hash = hash;
+							// 	});
+							// }
+							// });
+						</script>
+</body>
+
+</html>

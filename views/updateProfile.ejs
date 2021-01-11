@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+
+<head>
+    <title>
+        Code Book
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="">
+    <!-- Nav tabs -->
+
+    <%- include('./partials/nav.ejs') %>
+
+    <section>
+        <div class="row justify-content-center">
+
+            <div class="col-md-8 ">
+                <form method="POST" action="/profile/updateProfile" id="test">
+                   
+                    <div class="container">
+                        <h2 class="my-3">Please edit all the data you want to update</h2>
+                        
+                        <div class="input-group mb-2">
+                            <label style="width: 100px;">first name</label>
+                            <input form="test"  required type="text" id="fname" name="fname" class="form-control form-control-lg mb-md-0 mb-3" value="<%=user.user.Fname%>">
+                        </div>
+
+                        <div class="input-group mb-2">
+                            <label  style="width: 100px;">last name</label>
+                            <input form="test" required type="text" id="lname" name="lname" placeholder="Last Name" class="form-control form-control-lg mb-md-0 mb-3" value="<%=user.user.Lname%>">
+                        </div>
+                        <div class="input-group mb-2">
+                            <label style="width: 100px;">Email</label>
+                            <input form="test" required type="text" id="email" name="email" placeholder="Email" class="form-control form-control-lg mb-md-0 mb-3" value="<%=user.user.E_mail%>">
+                        </div>
+                        <div class="input-group mb-2">
+                            <label for="" style="width: 100px;">old password</label>
+                            <input form="test" required type="password" id="oldpassword" name="oldpassword" placeholder="old Password" class="form-control form-control-lg">
+                        </div>
+
+                        <div class="input-group mb-2">
+                            <label style="width: 100px;">new password</label>
+                            <input form="test" required type="password" id="newpassword" name="newpassword" placeholder="new Password" class="form-control form-control-lg">
+                        </div>
+
+
+                        <button form="test" type="submit" class="btn btn-outline-dark btn-block">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <%- include('./partials/footer.ejs') %>
+    <!-- Scripts -->
+
+    <%- include('./partials/Scripts.ejs') %>
+
+    <script>
+
+
+    </script>
+</body>
+
+</html>

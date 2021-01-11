@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+
+<head>
+    <title>
+        Code Book
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="">
+    <!-- Nav tabs -->
+
+    <%- include('./partials/nav.ejs') %>
+
+    <section>
+        <div class="row">
+            <div class="col py-3" style="background-color: #fff;">
+                <div class="container">
+                    <h2 class="display-4"><i class="fas fa-newspaper mr-2" style="font-size: 45px;"></i>Create Team
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+        <div class="row justify-content-center">
+
+            <div class="col-md-8 ">
+                <form action="/createteam" method="POST" id="createteam">
+                    <!--Specify the action later-->
+                    <div class="card-body text-center">
+                        <h2 class="mb-3">Please fill all the data to create a team</h2>
+                        <hr>
+                        <div class="d-md-flex d-block justify-content-between mb-3">
+                            <input form="createteam" type="text" required placeholder="Team name"
+                                class="form-control mb-md-0 mb-3 form-control-lg" type="text" id="teamName"
+                                name="teamName">
+                        </div>
+                        <div class="d-md-flex d-block justify-content-between">
+                            <input form="createteam" type="text" required
+                                placeholder="Team usernames separated by & e.g. nebo&shabro&mahdy"
+                                class="form-control mb-md-0 mb-3 form-control-lg" type="text" id="teamMembers"
+                                name="teamMembers">
+                        </div>
+                        <h2 class="mb-3 text-left text-muted">Note, team is 3 members only</h2>
+
+                        <button form="createteam" type="submit" class="btn btn-outline-dark btn-block">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <%- include('./partials/footer.ejs') %>
+    <!-- Scripts -->
+
+    <%- include('./partials/Scripts.ejs') %>
+
+    <script>
+        /*document.querySelector("button.btn-outline-dark").addEventListener('click',(e)=>{
+            console.log()
+        });*/
+    </script>
+</body>
+
+</html>

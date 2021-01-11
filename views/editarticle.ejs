@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+
+<head>
+    <title>
+        Code Book
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="">
+    <!-- Nav tabs -->
+
+    <%- include('./partials/nav.ejs') %>
+
+    <section>
+        <div class="row justify-content-center">
+
+            <div class="col-md-8 ">
+                <form action="/articles/edit/<%=article.ID%>" method="POST" id="createdoc">
+                    <div class="container">
+                        <h2 class="my-3">Please edit all the data you want to update</h2>
+                        <div class="form-group d-flex mb-3">
+                            <label for="">Article Title:</label>
+                            <input form="createdoc" type="text" required
+                                class="form-control mb-md-0 mb-3 form-control-lg" type="text" id="title" name="title"
+                                value="<%=article.ArtName%>">
+                        </div>
+                        <div class="form-group d-flex mb-3">
+                            <label for="">Article Topic:</label>
+                            <input form="createdoc" type="text" required
+                                class="form-control mb-md-0 mb-3 form-control-lg" type="text" id="Topic" name="Topic"
+                                value="<%=article.Topic%>">
+                        </div>
+                        <div class="form-group d-flex ">
+                            <label for="">Article Body:</label>
+                            <textarea form="createdoc" required class="form-control mb-3 form-control-lg" type="text"
+                                id="body" name="body"><%=article.Statment%></textarea>
+                        </div>
+
+
+                        <button form="createdoc" type="submit" class="btn btn-outline-dark btn-block">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <%- include('./partials/footer.ejs') %>
+    <!-- Scripts -->
+
+    <%- include('./partials/Scripts.ejs') %>
+
+    <script>
+
+
+    </script>
+</body>
+
+</html>

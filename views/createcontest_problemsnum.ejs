@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+
+<head>
+    <title>
+        Code Book
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="">
+    <!-- Nav tabs -->
+
+    <%- include('./partials/nav.ejs') %>
+
+        <section>
+            <div class="row">
+                <div class="col py-3" style="background-color: #fff;">
+                    <div class="container">
+                        <h2 class="display-4"><i class="fas fa-code mr-2" style="font-size: 45px;"></i>Create Contest
+                        </h2>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+
+                <div class="col-md-8 ">
+                    <form action="/createcontest" method="POST" id="formcontest">
+                        <div class="card-body text-center">
+                            <h2>Please specify number of problems</h2>
+                            <hr>
+                            <div class="d-md-flex d-block justify-content-between mb-3">
+                                <input form="formcontest" required type="number" placeholder="Number of problems" class="form-control mb-md-0 mb-3 form-control-lg"
+                                    " id="NumProblems" name="NumProblems">
+                            </div>
+                            <h2>Date</h2>
+                            <div class="d-md-flex d-block justify-content-between mb-3">
+                                <input form="formcontest" required type="date" placeholder="start date"
+                                    class="form-control mb-md-0 mb-3 form-control-lg"  id="startdate" name="startdate">
+                            </div>
+                            <h2>Start Time</h2>
+                            <div class="d-md-flex d-block justify-content-between mb-3">
+                                <input form="formcontest" required type="time" placeholder= "start time"
+                                    class="form-control mb-md-0 mb-3 form-control-lg" id="starttime" name="starttime">
+                            </div>
+                            <h2>Duration</h2>
+                            <div class="d-md-flex d-block justify-content-between mb-3">
+                                <input form="formcontest" required type="number" placeholder="duration in hours" class="form-control mb-md-0 mb-3 form-control-lg"
+                                    id="duration" name="duration">
+                            </div>
+                            
+                            <button form="formcontest" type="submit" name = "vote" value = "Next"
+                                class="btn btn-outline-dark btn-block">Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <%- include('./partials/footer.ejs') %>
+        <!-- Scripts -->
+
+        <%- include('./partials/Scripts.ejs') %>
+
+        <script>
+
+
+        </script>
+</body>
+
+</html>

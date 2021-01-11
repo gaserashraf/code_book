@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<!--
+tinypng
+-->
+<html>
+
+<head>
+	<title>
+		Code Book
+	</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script src="https://kit.fontawesome.com/85999f6d09.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="">
+	<!-- Nav tabs -->
+
+	<%- include('./partials/nav.ejs') %>
+
+		<section>
+			<div class="row">
+				<div class="col py-3" style="background-color: #fff;">
+					<div class="container">
+						<h2 class="display-4"><i class="fas fa-code mr-2" style="font-size: 45px;"></i>Create Problems
+						</h2>
+					</div>
+
+				</div>
+			</div>
+			<div class="row justify-content-center">
+
+				<div class="col-md-8 ">
+					<form action="/createproblem" method="POST" id="formProblem">
+						<div class="card-body text-center">
+							<h2>Please fill all data to crete problem</h2>
+							<hr>
+							<div class="d-md-flex d-block justify-content-between mb-3">
+								<input form="formProblem" required type="text" placeholder="problem name"
+									class="form-control mb-md-0 mb-3 form-control-lg" type="text" id="title"
+									name="title">
+							</div>
+							<!--As we don't have it stored in the database-->
+							<!--<div class="d-md-flex d-block justify-content-between mb-3">
+                                <input form="formProblem" type="text" placeholder="Problem tag (for ex: dfs,bfs...)" class="form-control mb-md-0 mb-3 form-control-lg" type="text" id="problemTag" name="problemTag">
+							</div>-->
+
+							<textarea form="formProblem" required placeholder="Problem Description"
+								class="form-control mb-3 form-control-lg" type="text" id="body" name="body"></textarea>
+
+							<div class="d-md-flex d-block justify-content-between mb-3">
+								<input form="formProblem" required type="text" placeholder="problem input format"
+									class="form-control mb-md-0 mb-3 form-control-lg" type="text"
+									id="problemInputFormat" name="problemInputFormat">
+							</div>
+							<div class="d-md-flex d-block justify-content-between mb-3">
+								<input form="formProblem" required type="text" placeholder="problem output format"
+									class="form-control mb-md-0 mb-3 form-control-lg" type="text"
+									id="problemOutputFormat" name="problemOutputFormat">
+							</div>
+
+
+							<div class="d-md-flex d-block justify-content-between mb-3">
+								<input form="formProblem" required type="text" placeholder="Sample input"
+									class="form-control mb-md-0 mb-3 form-control-lg" type="text" id="SampleInput"
+									name="SampleInput">
+							</div>
+							<div class="d-md-flex d-block justify-content-between mb-3">
+								<input form="formProblem" required type="text" placeholder="Sample output"
+									class="form-control mb-md-0 mb-3 form-control-lg" type="text" id="SampleOutput"
+									name="SampleOutput">
+							</div>
+
+							<div class="d-md-flex d-block justify-content-between mb-3">
+								<input form="formProblem" required type="text" placeholder="problem input" class="form-control mb-md-0 mb-3 form-control-lg"
+									type="text" id="problemInput" name="problemInput">
+							</div>
+							<div class="d-md-flex d-block justify-content-between mb-3">
+								<input form="formProblem" required type="text" placeholder="problem output" class="form-control mb-md-0 mb-3 form-control-lg"
+									type="text" id="problemOutput" name="problemOutput">
+							</div>
+							<div class="d-md-flex d-block justify-content-between mb-3">
+								<input form="formProblem" required type="text" placeholder="Problem Topic" class="form-control mb-md-0 mb-3 form-control-lg"
+									type="text" id="Topic" name="Topic">
+							</div>
+							<div class="d-md-flex d-block justify-content-between mb-3">
+								<input form="formProblem" required type="number" placeholder="Problem Score" class="form-control mb-md-0 mb-3 form-control-lg"
+									type="number" id="Score" name="Score">
+							</div>
+							<div class="d-md-flex d-block justify-content-between mb-3">
+								<input form="formProblem" required type="number" placeholder=" Problem Difficulty" class="form-control mb-md-0 mb-3 form-control-lg"
+									type="number" id="Difficulty" name="Difficulty">
+							</div>
+							<button form="formProblem" type="submit"
+								class="btn btn-outline-dark btn-block">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<%- include('./partials/footer.ejs') %>
+		<!-- Scripts -->
+
+		<%- include('./partials/Scripts.ejs') %>
+		<script>
+
+
+		</script>
+</body>
+
+</html>

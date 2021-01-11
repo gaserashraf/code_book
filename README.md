@@ -20,9 +20,9 @@
 ## 📝 Table of Contents
 
 - [About](#about)
-- [Screenshots](#Screenshots)
 - [Get Started](#Install)
 - [Technology](#tech)
+- [Screenshots](#Screenshots)
 
 ## 📙 About <a name = "about"></a>
 online website about competitive programming. The site offers explanations about topics related to competitive programming and articles written by experts. In addition, the main core of the site is to solve problems about competitive programming, so the site contains problems with variant difficulty levels. The user can submit his solution output and the site checks that output.
